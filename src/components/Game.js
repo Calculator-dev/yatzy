@@ -113,6 +113,7 @@ export default function Game() {
 
     if (counter === 13) {
         localStorage.setItem("highScore", getTotalScore())
+        localStorage.setItem("totalScore", getTotalScore())
     }
 
     const highScore = Object.values(localStorage).map(a => parseInt(a, 10));
