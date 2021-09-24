@@ -110,13 +110,13 @@ export default function Game() {
     }
 
 
+    const highScore = Object.values(localStorage).map(a => parseInt(a, 10));
 
-    if (counter === 13) {
+    if (counter === 13 && getTotalScore() > highScore) {
         localStorage.setItem("highScore", getTotalScore())
-        localStorage.setItem("totalScore", getTotalScore())
     }
 
-    const highScore = Object.values(localStorage).map(a => parseInt(a, 10));
+
 
     return (
         <div style={{ textAlign: "center" }}>
@@ -131,7 +131,7 @@ export default function Game() {
                 />
             </div>
             <div className={classes.button}>
-                <Button
+                {counter === 13 ? "" : <Button
                     variant="outlined"
                     color="primary"
                     disabled={
@@ -142,7 +142,7 @@ export default function Game() {
                     onClick={animateRoll}
                 >
                     {displayRollInfo()}
-                </Button>
+                </Button>}
             </div>
             {counter === 13 &&
                 <Button variant="outlined" color="primary" style={{ marginBottom: "10px" }} onClick={() => window.location.reload()}>Start New Game</Button>}

@@ -111,7 +111,7 @@ const ones = new TotalOneNumber({ val: 1, description: '1 point per 1' });
 const twos = new TotalOneNumber({ val: 2, description: '2 points per 2' });
 const threes = new TotalOneNumber({ val: 3, description: '3 points per 3' });
 const fours = new TotalOneNumber({ val: 4, description: '4 points per 4' });
-const fives = new TotalOneNumber({ val: 5, description: '6 points per 5' });
+const fives = new TotalOneNumber({ val: 5, description: '5 points per 5' });
 const sixes = new TotalOneNumber({ val: 6, description: '6 points per 6' });
 
 // three/four of kind score as sum of all dice

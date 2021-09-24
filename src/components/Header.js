@@ -4,6 +4,8 @@ import logo from "../style/dice.png"
 
 export default function Header({ highScore }) {
 
+
+
     return (
         <div style={{ width: "100%", backgroundColor: "lightblue", display: "flex", flexDirection: "row", padding: "10px" }} >
             <img src={logo} alt="logo" style={{ width: "30px", height: "30px" }} />
